@@ -44,11 +44,11 @@ int main(){
 	float Acc_x,Acc_y,Acc_z;
 	float Ax=0, Ay=0, Az=0;
 	fd = wiringPiI2CSetup(gy521_Address);    /*Initializes I2C with device Address*/
-	MPU_Init();		                 /* Initializes GY521 */
+	MPU_Init();		                 
 	
 	while(1)
 	{
-		/*Read raw value of Accelerometer from gy521*/
+		/*Read raw value of Accelerometer from MPU6050*/
 		Acc_x = read_raw_data(AcX);
 		Acc_y = read_raw_data(AcY);
 		Acc_z = read_raw_data(AcZ);
